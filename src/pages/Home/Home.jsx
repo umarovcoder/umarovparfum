@@ -1,5 +1,7 @@
 import React from 'react'
 import Header from '../../components/Header/Header'
+import ProductCard from '../../components/ProductCard'
+import { products } from '../../data/products'
 
 const Home = () => {
   return (
@@ -26,18 +28,8 @@ const Home = () => {
           <div className="container">
             <h2 style={{marginTop:0}}>Featured Collection</h2>
             <div className="grid products-grid">
-              {[1,2,3,4,5,6].map((i) => (
-                <article key={i} className="card">
-                  <div className="card-media"/>
-                  <div className="card-body">
-                    <h3 className="card-title">Essence No. {i}</h3>
-                    <p className="card-text">Amber, oud, and hints of citrus in perfect balance.</p>
-                    <div className="card-actions">
-                      <span className="price">$129</span>
-                      <button className="btn">Add to cart</button>
-                    </div>
-                  </div>
-                </article>
+              {products.slice(0, 6).map((p) => (
+                <ProductCard key={p.id} product={p} />
               ))}
             </div>
           </div>
