@@ -1,3 +1,22 @@
+# Umarov Parfum
+
+## Env setup
+
+Create a `.env` file in the project root with your EmailJS keys:
+
+```
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+Then configure your EmailJS template variables to accept: `from_name`, `from_email`, `message`, `to_email`.
+
+Start dev server:
+
+```
+npm run dev
+```
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
