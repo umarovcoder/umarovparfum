@@ -9,12 +9,25 @@ const Products = () => {
       <Header/>
       <main className="section">
         <div className="container">
-          <h1 style={{marginTop:0}}>Products</h1>
-          <div className="grid products-grid">
-            {products.map((p) => (
-              <ProductCard key={p.id} product={p} />
-            ))}
-          </div>
+          <h1 style={{marginTop:0}}>Katalog</h1>
+
+          <section style={{marginTop: '24px'}}>
+            <h2>Brend atirlar</h2>
+            <div className="grid products-grid">
+              {products.filter(p => p.category === 'brand').map((p) => (
+                <ProductCard key={p.id} product={p} />
+              ))}
+            </div>
+          </section>
+
+          <section style={{marginTop: '40px'}}>
+            <h2>Raspiv atirlar</h2>
+            <div className="grid products-grid">
+              {products.filter(p => p.category === 'raspiv').map((p) => (
+                <ProductCard key={p.id} product={p} />
+              ))}
+            </div>
+          </section>
         </div>
       </main>
     </div>
