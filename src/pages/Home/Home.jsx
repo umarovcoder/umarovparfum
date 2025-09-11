@@ -2,6 +2,8 @@ import React from 'react'
 import Header from '../../components/Header/Header'
 import ProductCard from '../../components/ProductCard'
 import { products } from '../../data/products'
+import gul from '../../assets/gul2.png'
+import atir from '../../assets/atir.png'
 
 const Home = () => {
   return (
@@ -19,8 +21,10 @@ const Home = () => {
               </div>
             </div>
             <div className="hero-art" aria-hidden="true">
-              <div className="orb orb-lg"/>
-              <div className="orb orb-sm"/>
+              <div className="flower-glow" aria-hidden="true"/>
+              <img src={atir} alt="perfume" className="hero-perfume"/>
+              <img src={gul} alt="flower" className="hero-flower"/>
+             
             </div>
           </div>
         </section>

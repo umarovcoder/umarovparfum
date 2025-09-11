@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import logo from '../../assets/logo.png'
 import './Header.css'
 
 const Header = () => {
@@ -8,12 +9,13 @@ const Header = () => {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <Link to="/" className="brand" onClick={() => setIsOpen(false)}>Umarov Parfum</Link>
+        <Link to="/" className="brand" onClick={() => setIsOpen(false)}>
+          <img src={logo} alt="logo" style={{ height: 14, width: 'auto' }} />
+        </Link>
         <nav className={`nav ${isOpen ? 'open' : ''}`}>
-          <NavLink to="/" onClick={() => setIsOpen(false)}>Home</NavLink>
-          <NavLink to="/products" onClick={() => setIsOpen(false)}>Products</NavLink>
-          <NavLink to="/about" onClick={() => setIsOpen(false)}>About</NavLink>
-          <NavLink to="/contact" onClick={() => setIsOpen(false)}>Contact</NavLink>
+          <NavLink to="/products" onClick={() => setIsOpen(false)}>Mahsulotlar</NavLink>
+          <NavLink to="/about" onClick={() => setIsOpen(false)}>Biz haqimizda</NavLink>
+          <NavLink to="/contact" onClick={() => setIsOpen(false)}>Aloqa</NavLink>
         </nav>
         <button className="menu-btn" aria-label="Toggle menu" onClick={() => setIsOpen(!isOpen)}>
           <span/>
