@@ -42,7 +42,13 @@ const ProductDetail = () => {
 
           <div className="grid" style={{gridTemplateColumns: '1fr 1fr', gap: '24px'}}>
             <div>
-              {product.imageUrl ? <img src={product.imageUrl} alt={product.name} style={{width: '100%', borderRadius: 8}}/> : null}
+              {product.imageUrl ? (
+                <img
+                  src={product.imageUrl}
+                  alt={product.name}
+                  style={{ width: '100%', maxWidth: 440, borderRadius: 8, margin: '0 auto', display: 'block' }}
+                />
+              ) : null}
             </div>
             <div>
               <h1 style={{marginTop: 0}}>{product.name}</h1>
