@@ -14,7 +14,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (!form.name || !form.email || !form.message) {
-      setStatus({ loading: false, ok: false, msg: 'Please fill in all fields.' })
+      setStatus({ loading: false, ok: false, msg: 'Iltimos, barcha maydonlarni toʻldiring.' })
       return
     }
     try {
@@ -40,25 +40,25 @@ const Contact = () => {
       <Header/>
       <main className="section">
         <div className="container">
-          <h1 style={{marginTop:0}}>Contact</h1>
+          <h1 style={{marginTop:0}}>Aloqa</h1>
           <div className="grid" style={{gridTemplateColumns:'1fr',gap:'16px',maxWidth:'720px'}}>
             <form className="card" onSubmit={handleSubmit}>
               <div className="card-body">
-                <label>Name<br/>
-                  <input name="name" value={form.name} onChange={handleChange} type="text" placeholder="Your name" className="input"/>
+                <label>Ism<br/>
+                  <input name="name" value={form.name} onChange={handleChange} type="text" placeholder="Ismingiz" className="input"/>
                 </label>
                 <label>Email<br/>
-                  <input name="email" value={form.email} onChange={handleChange} type="email" placeholder="you@example.com" className="input"/>
+                  <input name="email" value={form.email} onChange={handleChange} type="email" placeholder="siz@example.com" className="input"/>
                 </label>
-                <label>Message<br/>
-                  <textarea name="message" value={form.message} onChange={handleChange} rows="5" placeholder="How can we help?" className="input"/>
+                <label>Xabar<br/>
+                  <textarea name="message" value={form.message} onChange={handleChange} rows="5" placeholder="Qanday yordam bera olamiz?" className="input"/>
                 </label>
                 {status.msg && (
                   <div style={{color: status.ok ? 'var(--primary)' : '#ff6b6b'}}>{status.msg}</div>
                 )}
                 <div style={{marginTop:'8px'}}>
                   <button className="btn" type="submit" disabled={status.loading}>
-                    {status.loading ? 'Sending…' : 'Send'}
+                    {status.loading ? 'Yuborilmoqda…' : 'Yuborish'}
                   </button>
                 </div>
               </div>

@@ -13,7 +13,7 @@ const ProductCard = ({ product }) => {
           <p className="card-text">{product.description}</p>
           <div className="card-actions">
             <span className="price">${product.price}</span>
-            <button className="btn" type="button">Ko'rish</button>
+            <button className="btn" type="button">Ko‘rish</button>
           </div>
         </div>
       </Link>

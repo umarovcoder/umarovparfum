@@ -13,11 +13,11 @@ const Home = () => {
         <section className="section hero">
           <div className="container hero-inner">
             <div className="hero-copy">
-              <h1 className="hero-title">Opulent Essence</h1>
-              <p className="hero-sub">A curation of luxurious fragrances crafted for timeless allure.</p>
+              <h1 className="hero-title">Eng yaxshi atirlar bir joyda</h1>
+              <p className="hero-sub">Butun O'zbekistonga bepul yetkazib beramiz</p>
               <div className="hero-cta">
-                <a href="#products" className="btn">Shop Collection</a>
-                <a href="#about" className="btn" style={{background:'transparent',color:'var(--text)',border:'1px solid var(--border)'}}>Learn More</a>
+                <a href="#products" className="btn">Katalogdan xarid</a>
+                <a href="#about" className="btn" style={{background:'transparent',color:'var(--text)',border:'1px solid var(--border)'}}>Batafsil</a>
               </div>
             </div>
             <div className="hero-art" aria-hidden="true">
@@ -30,7 +30,7 @@ const Home = () => {
         </section>
         <section id="products" className="section">
           <div className="container">
-            <h2 style={{marginTop:0}}>Featured Collection</h2>
+            <h2 style={{marginTop:0}}>Tanlangan to‘plam</h2>
             <div className="grid products-grid">
               {products.slice(0, 6).map((p) => (
                 <ProductCard key={p.id} product={p} />
@@ -42,11 +42,11 @@ const Home = () => {
           <div className="container footer-inner">
             <div className="footer-brand">Umarov Parfum</div>
             <div className="footer-links">
-              <a href="#about">About</a>
-              <a href="#products">Products</a>
-              <a href="#contact">Contact</a>
+              <a href="#about">Biz haqimizda</a>
+              <a href="#products">Mahsulotlar</a>
+              <a href="#contact">Aloqa</a>
             </div>
-            <div className="footer-copy">© {new Date().getFullYear()} Umarov Parfum. All rights reserved.</div>
+            <div className="footer-copy">© {new Date().getFullYear()} Umarov Parfum. Barcha huquqlar himoyalangan.</div>
           </div>
         </footer>
       </main>

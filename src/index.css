@@ -1,12 +1,14 @@
 /* Global dark theme */
 :root {
-  --bg: #0c0c0f;
-  --surface: #141418;
-  --muted: #8b8b94;
-  --text: #e8e8ee;
-  --primary: #c0a27a; /* opulent gold */
-  --primary-strong: #d4b98e;
-  --border: #25252b;
+  --bg: #0b0a0b;
+  --surface: #141016;
+  --muted: #9b8f96;
+  --text: #F5F5DC; /* accent */
+  --primary: #800020; /* brand burgundy */
+  --primary-strong: #9a0a2a;
+  --primary-soft: rgba(128, 0, 32, 0.28);
+  --accent: #F5F5DC; /* beige */
+  --border: #2a2228;
 }
 
 * {
@@ -41,7 +43,7 @@ img { max-width: 100%; display: block; }
   gap: 10px;
   padding: 12px 20px;
   background: var(--primary);
-  color: #111;
+  color: var(--accent);
   border-radius: 999px;
   border: 1px solid transparent;
   font-weight: 600;
@@ -50,7 +52,7 @@ img { max-width: 100%; display: block; }
 .btn:hover {
   background: var(--primary-strong);
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(212, 185, 142, 0.25);
+  box-shadow: 0 6px 20px rgba(128, 0, 32, 0.35);
 }
 
 .section {
@@ -69,8 +71,8 @@ img { max-width: 100%; display: block; }
 /* Hero */
 .hero {
   position: relative;
-  background: radial-gradient(1200px 500px at 80% 20%, rgba(192,162,122,0.12), transparent),
-              linear-gradient(180deg, #0c0c0f 0%, #0d0d12 100%);
+  background: radial-gradient(1200px 500px at 80% 20%, rgba(128,0,32,0.20), transparent),
+              linear-gradient(180deg, #0b0a0b 0%, #0e0a10 100%);
 }
 .hero-inner {
   display: grid;
@@ -93,12 +95,13 @@ img { max-width: 100%; display: block; }
   height: 220px;
   transform: translateX(20%) translateY(0%);
   border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(128,0,32,.35), rgba(128,0,32,.18) 55%, transparent 70%);
   filter: blur(12px);
   z-index: 1;
 }
 .orb { position: absolute; border-radius: 50%; filter: blur(18px); opacity: .7; }
-.orb-lg { width: 260px; height: 260px; right: 10%; top: 0; background: rgba(212,185,142,.22); }
-.orb-sm { width: 120px; height: 120px; right: 30%; top: 60px; background: rgba(192,162,122,.28); }
+.orb-lg { width: 260px; height: 260px; right: 10%; top: 0; background: rgba(128,0,32,.28); }
+.orb-sm { width: 120px; height: 120px; right: 30%; top: 60px; background: rgba(128,0,32,.22); }
 
 @media (min-width: 900px) {
   .hero-inner { grid-template-columns: 1.05fr .95fr; }
@@ -106,7 +109,7 @@ img { max-width: 100%; display: block; }
   .hero-art { height: 460px; }
   .hero-perfume { right: 24%; top: 0px; width: 450px; transform: translateX(15%); }
   .hero-flower { width: 480px; top: -40px; right: 8%; }
-  .flower-glow { right: 8%; top: 40px; width: 360px; height: 360px; transform: translateX(18%) translateY(0%); filter: blur(16px); }
+  .flower-glow { right: 8%; top: 40px; width: 360px; height: 360px; transform: translateX(18%) translateY(0%); background: radial-gradient(closest-side, rgba(128,0,32,.35), rgba(128,0,32,.18) 55%, transparent 70%); filter: blur(16px); }
 }
 
 /* Products */
