@@ -14,6 +14,9 @@ const Header = () => {
         </Link>
         <nav className={`nav ${isOpen ? 'open' : ''}`}>
           <NavLink to="/products" onClick={() => setIsOpen(false)}>Mahsulotlar</NavLink>
+          <NavLink to="/brands" onClick={() => setIsOpen(false)}>Brendlar</NavLink>
+          <NavLink to="/how-to-order" onClick={() => setIsOpen(false)}>Buyurtma qilish</NavLink>
+          <NavLink to="/faq" onClick={() => setIsOpen(false)}>FAQ</NavLink>
           <NavLink to="/about" onClick={() => setIsOpen(false)}>Biz haqimizda</NavLink>
           <NavLink to="/contact" onClick={() => setIsOpen(false)}>Aloqa</NavLink>
         </nav>

@@ -34,13 +34,13 @@ const ProductDetail = () => {
   return (
     <div>
       <Header/>
-      <main className="section">
-        <div className="container">
+      <main className="section" style={{display:'grid', justifyItems:'center'}}>
+        <div className="container" style={{maxWidth: 980}}>
           <nav style={{marginBottom: '16px'}}>
             <Link to="/products">← Katalog</Link>
           </nav>
 
-          <div className="grid" style={{gridTemplateColumns: '1fr 1fr', gap: '24px'}}>
+          <div className="grid" style={{gridTemplateColumns: '1fr 1fr', gap: '24px', alignItems:'start'}}>
             <div>
               {product.imageUrl ? (
                 <img
@@ -63,8 +63,9 @@ const ProductDetail = () => {
                       className="btn"
                       onClick={() => setSelectedMl(opt.value)}
                       style={{
-                        background: selectedMl === opt.value ? '#111' : undefined,
-                        color: selectedMl === opt.value ? '#fff' : undefined
+                        background: selectedMl === opt.value ? 'var(--primary)' : '#0f0f14',
+                        color: selectedMl === opt.value ? 'var(--accent)' : 'var(--text)',
+                        border: selectedMl === opt.value ? '1px solid transparent' : '1px solid var(--border)'
                       }}
                     >
                       {opt.label}
@@ -78,8 +79,15 @@ const ProductDetail = () => {
                 <span style={{color: '#888'}}>({selectedMl} ml)</span>
               </div>
 
-              <div className="card-actions" style={{marginTop: 16}}>
-                <button className="btn">Savatga qo'shish</button>
+              <div className="card" style={{marginTop: 20}}>
+                <div className="card-body" style={{display:'grid', gap:8}}>
+                  <strong className="card-title">Buyurtma berish</strong>
+                  <p className="card-text">Hozircha buyurtmalar Telegram orqali qabul qilinadi. Mahsulot nomi va hajmini yozib yuboring.</p>
+                  <div style={{display:'flex', gap:8, flexWrap:'wrap'}}>
+                    <a className="btn" href="https://t.me/" target="_blank" rel="noreferrer">Telegram orqali bog‘lanish</a>
+                    <Link className="btn" to="/how-to-order" style={{background:'transparent', color:'var(--text)', border:'1px solid var(--border)'}}>Qanday buyurtma berish?</Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -41,6 +41,15 @@ const Contact = () => {
       <main className="section">
         <div className="container">
           <h1 style={{marginTop:0}}>Aloqa</h1>
+          <div className="card" style={{marginTop:12, marginBottom:16}}>
+            <div className="card-body" style={{display:'grid', gap:8}}>
+              <strong className="card-title">Telegram orqali tez bog‘laning</strong>
+              <p className="card-text">Buyurtma berish, maslahat va savollar uchun quyidagi tugma orqali yozing.</p>
+              <div>
+                <a className="btn" href="https://t.me/" target="_blank" rel="noreferrer">Telegramga yozish</a>
+              </div>
+            </div>
+          </div>
           <div className="grid" style={{gridTemplateColumns:'1fr',gap:'16px',maxWidth:'720px'}}>
             <form className="card" onSubmit={handleSubmit}>
               <div className="card-body">
